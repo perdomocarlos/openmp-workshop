@@ -5,7 +5,7 @@ Not too many years ago, single instructions were how we delivered work to comput
 Today the sequential programming approach to which we are accustomed represents a barrier to the scientfic world by preventing scientist form carrying out detailed experiments of a given phenomenon due to the lack of computationla power.
 
 ## Example 1
-This code is the matrix multiplication code, given in a sequential approach. ¿How many cores this *matrixmult.c* takes to perform its calculation? ¿There is paralelism?. To answere these questions lets perform the following experiment.
+This code is the matrix multiplication code, given in a sequential approach. ¿How many cores this *matrixmult.c* takes to perform its calculation? ¿Is there paralelism?. To answere these questions lets perform the following experiment.
 
 Run the following command in one **Terminal**
 
