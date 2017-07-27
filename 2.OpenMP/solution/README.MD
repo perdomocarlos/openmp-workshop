@@ -1,9 +1,9 @@
 # Parallel Programming Approach
 
-Parallel computing allow to divide a great tasks in subtasks that in consequense can be performed in parallel.
+Parallel programming allow to divide a great tasks in subtasks that in consequense can be performed in parallel by a parallel computer.
 
 ## Example
-This code is the matrix multiplication code, given in a sequential approach. The objective of this example is to parallelize it with OpenMP as follows and anwere the quetions ¿How many cores this *matrixmult.c* takes to perform its calculation? ¿Is there paralelism?.
+This code is the matrix multiplication code, given in a sequential approach. The objective of this example is to parallelize it with OpenMP and anwere the quetions ¿How many cores this *matrixmult.c* takes to perform its calculation? ¿Is there paralelism?.
 
 ### Edit the file *matrixmult.c*
 
@@ -19,7 +19,7 @@ This code is the matrix multiplication code, given in a sequential approach. The
 #include <stdio.h>      /* Standard I/O Library: printf */
 #include <stdlib.h>     /* Standard Library: malloc, calloc, free, ralloc */
 #include <string.h>     /* String funtions: strcpy*/
-#include <omp.h>		/* OpenMP library */
+#include <omp.h>        /* OpenMP library */
 ```
 
 * Replace this code
@@ -41,14 +41,14 @@ for(int i=0;i<N;i++){
 /* C = A x B */
 #pragma omp parallel shared(A,B,C)
 {
-	#pragma omp for 
-	for(int i=0;i<N;i++){
-		for(int j=0;j<N;j++){
-			for(int k=0;k<N;k++){
-				C[i][j] += A[i][k] * B[k][j];
-			}
-		}
-	}
+    #pragma omp for 
+    for(int i=0;i<N;i++){
+        for(int j=0;j<N;j++){
+            for(int k=0;k<N;k++){
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
 } 
 ```
 
