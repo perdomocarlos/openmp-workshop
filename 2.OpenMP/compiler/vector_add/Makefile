@@ -4,8 +4,8 @@ EXT = .c
 COMPILER = g++
 
 # Compiler optimizations -O3
-# Checking compiler loops optimizations -fopt-info-loop
-CFLAGS = -std=gnu++11 -O3 -fopt-info-loop
+# Give a compiler optimizations feedback -fopt-info-all
+CFLAGS = -std=gnu++11
 # Run in debug mode
 run:  compile
 	@clear
