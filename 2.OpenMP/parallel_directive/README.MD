@@ -1,8 +1,9 @@
 # Parallel Programming With OpenMP (*parallel* directve)
 
-OpenMP allows us to indicate which **regions of the code** we want to parallelize, annotating that section with directives. the **parallel directive** create a team of threads where each thread execute the code enclosed by the directive.
+OpenMP allows us to indicate which **regions of the code** we want to parallelize, annotating that sections with directives. the **parallel directive** create a team of threads where each thread execute the code enclosed by the directive.
 
 ## Exercise 1
+
 This is the *hello world code* this code prints the word "Hello World !" by terminal. Lest check if this code do what we expect.
 
 ### Run the *parallel.c* code as follows
@@ -14,7 +15,7 @@ make run
 
 ## Exercise 2
 
-The objective of this exersice is to paralelize the following region of the following code.
+The objective of this exersice is to paralelize the following region of the *parallel.c* code.
 
 ```c
 printf("Hello World !");
@@ -47,7 +48,6 @@ printf("Hello World !\n");
 { // Start parallel region
 printf("Hello World !\n");
 } // End parallel region
-return EXIT_SUCCESS;
 ```
 * Run the code
 
@@ -55,6 +55,4 @@ return EXIT_SUCCESS;
 make run 
 ```
 
-¿How many "Hello World !" were printed in the terminal?
-
-
+¿How many "Hello World !" were printed in the terminal? ¿Why?
