@@ -4,7 +4,7 @@ OpenMP allows us to indicate which **regions of the code** we want to paralleliz
 
 ## Homework
 
-This is the *hello world code* this code prints the word "Hello World !" by terminal. Lest check if this code do what we expect.
+This is the *add code* this code prints sum of to number 50 and 60. Lest check if this code do what we expect.
 
 ### Run the *parallel.c* code as follows
 
@@ -20,9 +20,9 @@ The objective of this exersice is to paralelize the following region of the *par
 ```c
 add();
 ```
-Let's put into practice what is learned and parallelize the section of code give. If you need help, click [here](https://github.com/DonAurelio/Parallel-Programming/tree/master/2.OpenMP/parallel_directive)
+Let's put into practice what is learned and parallelize the section of code given. If you need help, click [here](https://github.com/DonAurelio/Parallel-Programming/tree/master/2.OpenMP/parallel_directive)
 
-* After you have parallelized the code, run it and describe what happened o it.
+* After you have parallelized the code, run it and describe what happened to it.
 
 ```bash
 make run 
