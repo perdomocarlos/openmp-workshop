@@ -1,4 +1,4 @@
-# Introduction to OpenMP Workshop
+# Introduction to OpenMP - Workshop
 
 The aim of this introductory workshop is to highlight the advantage of OpenMP as a library available in the GNU compiler to apply parallelism in our C/C++ applications. This workshop covers:
 
@@ -9,7 +9,9 @@ The aim of this introductory workshop is to highlight the advantage of OpenMP as
 
 ## Methodology
 
-This workshop is guided by a presentation. During he presentation is required to make changes to te code present in this repository. 
+This workshop is guided by a presentation. During the presentation is required to make changes to the code present in this repository.
 
 ## References
-[OpenMP Lawrence Livermore National Laboratory](https://computing.llnl.gov/tutorials/openMP/)
+[OpenMP - Lawrence Livermore National Laboratory](https://computing.llnl.gov/tutorials/openMP/)
+[Compiler Options - Cornell University](https://cvw.cac.cornell.edu/codeopt/compilerOptions)
+[Vectorization - Cornell University](https://cvw.cac.cornell.edu/vector/)
