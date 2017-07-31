@@ -1,6 +1,6 @@
 # Parallel Programming With OpenMP (*parallel* directve)
 
-OpenMP allows us to indicate which **regions of the code** we want to parallelize, annotating that sections with directives. the **parallel directive** create a team of threads where each thread execute the code enclosed by the directive.
+OpenMP allows us to indicate which **regions of the code** we want to parallelize, annotating that sections with directives. the **parallel directive** creates a team of threads where each thread execute the code enclosed by the directive.
 
 ## Exercise 1
 
