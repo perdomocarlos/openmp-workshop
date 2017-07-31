@@ -51,12 +51,12 @@ for(int j=0; j<N; ++j) C[j] = A[j] * B[j] + A[j] ;
 for(int j=0; j<N; ++j) C[j] = A[j] * B[j] + A[j] ;
 }
 ```
-> The previous code, create the parallel región (*parallel directive*),  suggest arrays A, B, and C  will be shared among threads (*shared clause*). Finally suggets each thread will perform a different iteration of the loop (*for directive*). i.e, if for loop has 100 iterations and 2 threads were created, the first thread performs 0 - 49 iterations and the second one the 50 - 99 iterations.
-
 * Run the code
 
 ```bash
 make run 
 ```
 
-¿How much time did it take to finish? ¿Did execution time improve? ¿Why? **Ask the monitor for answeres**.
+The previous code, create the parallel región (**parallel** directive),  suggest arrays A, B, and C  will be shared among threads (**shared** clause). Finally suggets each thread will perform a different iteration of the loop (**for** directive). i.e, if for loop has 100 iterations and 2 threads were created, the first thread performs 0 - 49 iterations and the second one the 50 - 99 iterations.
+
+¿How much time did it take to finish? ¿Did execution time improve? ¿Why? **Ask monitor for answers**.
