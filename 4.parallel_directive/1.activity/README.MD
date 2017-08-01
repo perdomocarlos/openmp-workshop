@@ -66,7 +66,12 @@ Complete the code with the following steps (please replace the comments).
 omp_set_num_therads(8);
 ```
 
-3. Create a parallel
+3. Create a parallel region
+
+    1. Get thread id
+
+    2. Print thread id
+
 
 ```c
 #pragma omp parallel
@@ -75,13 +80,11 @@ omp_set_num_therads(8);
 }
 ```
 
-    1. Get thread id
-
 ```c
 int thread_id = omp_get_thread_num();
 ```
 
-    2. Print thread id
+
 
 ```c
 printf("Hi i'm thread %d\n",thread_id);
