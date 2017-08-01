@@ -85,10 +85,7 @@ Paralelize the following region of the *parallel.c* code.
 printf("Hello World !");
 ```
 
-Then run 
-
-```
-* Run the *parallel.c* code and answer the questions
+Then run Run the *parallel.c* code and answer the questions
 
 ```bash
 make run 
@@ -96,4 +93,5 @@ make run
 
 ### Questions
 
-* ¿How many "Hello World !" were printed in the terminal? ¿Why?
+* ¿How many "Hello World !" were printed in the terminal? 
+* ¿Why?
