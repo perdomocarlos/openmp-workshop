@@ -8,8 +8,8 @@ int main(void){
     // 2.Call the routine omp_set_num_therads here
 
     // 3.Create a parallel región here
-    // 3.1.Get thread id (in the parallel región)
-    // 3.2 Print thread id (in the parallel región)
+    // i.Get thread id (in the parallel región)
+    // ii.Print thread id (in the parallel región)
 
     return EXIT_SUCCESS;
 };
