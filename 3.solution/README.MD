@@ -1,11 +1,12 @@
 # Parallel Programming Approach
 
-Parallel programming allow to divide a great tasks in subtasks that in consequense can be performed in parallel by a parallel computer.
+Parallel programming allow to divide a big task in subtasks that in consequense can be performed in parallel by a parallel computer (PCs, Cluster, Supercomputer).
 
 ## Example
-This code is the matrix multiplication code, given in a sequential approach. The objective of this example is to parallelize it with OpenMP and anwere the quetions ¿How many cores this *matrixmult.c* takes to perform its calculation? ¿Is there paralelism?.
 
-### Edit the file *matrixmult.c*
+This code is the matrix multiplication code, given in a sequential approach. The objective of this example is to parallelize it with OpenMP. After that answer the questions.
+
+Edit the file *matrixmult.c*
 
 * Add the OpenMP Libary 
 
@@ -63,3 +64,8 @@ Then, run the *matrixmult.c* code in another *Terminal* as follows, and quickly 
 ```bash
 make run 
 ```
+
+## Questions
+
+* ¿How many cores this *matrixmult.c* takes to perform its calculation? 
+* ¿Is there paralelism?.

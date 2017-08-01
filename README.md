@@ -15,3 +15,4 @@ This workshop is guided by a presentation. During the presentation is required t
 [OpenMP - Lawrence Livermore National Laboratory](https://computing.llnl.gov/tutorials/openMP/)
 [Compiler Options - Cornell University](https://cvw.cac.cornell.edu/codeopt/compilerOptions)
 [Vectorization - Cornell University](https://cvw.cac.cornell.edu/vector/)
+[Linux User's Manual Time](http://man7.org/linux/man-pages/man1/time.1.html) 

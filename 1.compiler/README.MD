@@ -4,7 +4,7 @@ The compiler tries to minimize certain attributes of a computer program in order
 
 * Determine whether there is parallelism at the instruction level.
 * Determine whether vectorization is possible.
-* Reorder variables to recude Main Memory access.
+* Reorder variables to recude Main Memory accesses.
 * Delete the calculation of variables that do not affect the status of the program.
 
 ## Enable Optimizations
@@ -41,7 +41,7 @@ For this example we will focus on the execution time and the correctness of the 
 
 ## Exercise 2
 
-Change the variable **CFLAGS** in you *Makefile* as follows.
+The compilation and execution of the program is controlled by the file *Makefile*. Change the variable **CFLAGS** in your *Makefile* as follows.
 
 ```basemake
 CFLAGS = -std=gnu++11
@@ -57,5 +57,13 @@ Run the application *vector_add.c* as follows, an check the excution time and pr
 make run 
 ```
 
-Now do the same Exercise 2 but this time with the optimization flags -O2 and -O3. ¿What happend with the run time? ¿Which option works best? ¿Is the answere correct in each case?.
+## Exersice 3
 
+Now do the same Exercise 2 but this time with the optimization flags -O2 and -O3. 
+
+
+## Questions
+
+* ¿What happend with the run time? 
+* ¿Which option works best? 
+* ¿Is the answer correct in each case?.
