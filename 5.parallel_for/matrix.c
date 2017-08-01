@@ -9,7 +9,11 @@ typedef unsigned long int long_int;
 
 int main(int argc, char *argv[]){
 
-    /* Reserving space in memory for matrices rows  */
+    /* Requesting dynamic memory for space to allocate A,B,C 
+    matrcies are created commonly like A[N][N], B[N][N], C[N][N]. However
+    when N is too large it is neccesary to create them in the way
+    described as follows.
+    */
     long_int ** A = (long_int **) malloc( N * sizeof(long_int *) );
     long_int ** B = (long_int **) malloc( N * sizeof(long_int *) );
     long_int ** C = (long_int **) malloc( N * sizeof(long_int *) );
@@ -48,7 +52,11 @@ int main(int argc, char *argv[]){
 
     printf ( "\t%d \t\t\t %s \t\t ", N, validation );
 
-    /* Releasing Main Memory */
+    /* When we request dynamic memory for large arrays
+    it is neccesary to release it before the application finish.
+    If you do not do this, the memory will be occupied with the data
+    of the arrays A, B and C regardless of whether the program is 
+    finished. */
     for(int i=0; i<N; ++i){
         free(A[i]);
         free(B[i]);

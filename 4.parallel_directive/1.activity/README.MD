@@ -82,8 +82,6 @@ omp_set_num_therads(8);
 int thread_id = omp_get_thread_num();
 ```
 
-
-
 ```c
 printf("Hi i'm thread %d\n",thread_id);
 ```
@@ -94,7 +92,14 @@ Run the code and answer the following questions.
 make run 
 ```
 
-## Questions
+### Questions
 
 * ¿What is the output of the program? 
 * ¿Why?
+
+
+## Activity 2
+
+Modify the parallel region, insted of each thread print its **id**, print if its **id** is even or odd.
+**Hint: a number N is even if 2 % N == 0, **
+

@@ -1,6 +1,7 @@
 #include <stdio.h>      /* Standard I/O Library: printf */
 #include <stdlib.h>     /* Standard Library: malloc, calloc, free, ralloc */
 #include <string.h>     /* String funtions: strcpy*/
+// 1.Import the omp.h funtion library here
 
 /* Array size */
 #define N 99000000
@@ -18,7 +19,8 @@ int main(){
     /* Arrays content initialization */
     for(int i=0; i<N; ++i) A[i] = B[i] = C[i] = 1;
 
-    /* Add and multiplication C = A * B + A */
+    // 2. Enclose the following section of code in a parallel region
+    // i. add the parallel for directive just before for(int j=0; j<N; ++j)...;
     for(int j=0; j<N; ++j) C[j] = A[j] * B[j] + A[j] ;
     
     /* Answere validation */
