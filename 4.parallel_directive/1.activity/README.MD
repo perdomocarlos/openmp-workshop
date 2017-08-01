@@ -1,4 +1,4 @@
-# OpenMP Parallel Directive (Routines)
+# OpenMP (Routines)
 
 OpenMP provide to us a number of routines that allows to:
 
@@ -32,7 +32,7 @@ omp_in_parallel();
 
 The purpose of this activity is to know how to modify the number of threads that will start in a **parallel región**, and know the identifier of each thread executed.
 
-This activity is to complete the code *parallel.c* on this folder. The code is marked with number 1 to 4 that describes the sequence of steps that you must follow.
+This activity is to complete the code *parallel.c* on this folder. The code is marked with number 1 to 3 that describes the sequence of steps that you must follow.
 
 ```c
 #include <stdlib.h>     /* Standard Library: EXIT_SUCCESS */
@@ -75,13 +75,13 @@ omp_set_num_therads(8);
 }
 ```
 
-3.1. Get thread id
+    1. Get thread id
 
 ```c
 int thread_id = omp_get_thread_num();
 ```
 
-3.2. Print thread id
+    2. Print thread id
 
 ```c
 printf("Hi i'm thread %d\n",thread_id);
