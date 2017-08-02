@@ -87,7 +87,7 @@ printf("Hi i'm thread %d, i'm working on %d,%d\n",thread_id,i,j);
 Add the compilation flag **-fopenmp** to the CFLAGS variable in your *Makefile*. To enable OpenMP in the code.
 
 ```basemake
-CFLAGS = -O3 -fopenmp
+CFLAGS = -std=gnu++11 -O3 -fopenmp
 ```
 
 Run the code and answer the following questions.

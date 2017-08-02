@@ -54,7 +54,7 @@ for(int i=0;i<N;i++){
 * Add the compilation flag **-fopenmp** to the CFLAGS variable in your *Makefile*. To enable OpenMP in the code.
 
 ```basemake
-CFLAGS = -O3 -fopenmp
+CFLAGS = -std=gnu++11 -O3 -fopenmp
 ```
 
 * Run the following command in one **Terminal**

@@ -51,7 +51,7 @@ For this introductory workshop do not care about all this clauses, in the follow
 * Add the compilation flag **-fopenmp** to the CFLAGS variable in your *Makefile*. To enable OpenMP in the code.
 
 ```basemake
-CFLAGS = -O3 -fopenmp
+CFLAGS = -std=gnu++11 -O3 -fopenmp
 ```
 * Then run the code and check the code is working as you expect. **Hint: run the code many times**. 
 

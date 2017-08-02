@@ -97,7 +97,7 @@ printf("Hello World !");
 Add the compilation flag **-fopenmp** to the CFLAGS variable in your *Makefile*. To enable OpenMP in the code.
 
 ```basemake
-CFLAGS = -O3 -fopenmp
+CFLAGS = -std=gnu++11 -O3 -fopenmp
 ```
 
 Then run Run the *parallel.c* code and answer the questions.

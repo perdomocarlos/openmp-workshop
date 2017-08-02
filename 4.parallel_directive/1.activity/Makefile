@@ -6,7 +6,7 @@ COMPILER = g++
 # CFLAGS
 # -O3 Compiler optimization
 # -fopenmp OpenMP library
-CFLAGS = -O3
+CFLAGS = -std=gnu++11 -O3
 
 run: compile
 	@./$(TARGET)

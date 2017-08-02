@@ -15,7 +15,7 @@ This workshop is guided by a presentation. During the presentation is required t
 
 * To get advange of the computational power available on parallel computer it is neccesary the parallel programming.
 
-* Use of compiler flags is also an alternative to optimize the code execution.
+* Use of compiler flags is also an alternative to optimize the code runtime.
 
 * Some applications only need compile optimizations to improve their runtime. As is the case in section 5.parallel_for - 2.activity (vectors addition).
 

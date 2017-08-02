@@ -46,7 +46,7 @@ Complete the code with the following steps (please replace the comments).
 1. Import the omp.h funtion library
 
 ```c
-#include <omp.h>        /* OpenMP library */
+#include <omp.h>        /* OpenMP funtions header */
 ```
 
 2. Parallize this section of code with a **parallel region**
@@ -78,6 +78,11 @@ int thread_id = omp_get_thread_num();
 printf("Hi i'm thread %d, i have the %d iteration of the loop",thread_id,i);
 
 ```
+Add the compilation flag **-fopenmp** to the CFLAGS variable in your *Makefile*. To enable OpenMP in the code.
+
+```basemake
+CFLAGS = -std=gnu++11 -O3 -fopenmp
+```
 
 Run the code and answer the following questions.
 
@@ -87,8 +92,8 @@ make run
 
 ### Questions
 
-* ¿How many threads were executed?
-* ¿How many **for** iterations each thread executed?
+* How many threads were executed?
+* How many **for** iterations each thread executed?
 * Run the code many times ¿What changes do you see in the program output?
 
 Do the activities 1 and 2 of this section to learn more about the **parallel** directive.
