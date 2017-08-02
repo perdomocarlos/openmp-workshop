@@ -23,6 +23,8 @@ This workshop is guided by a presentation. During the presentation is required t
 
 ## References
 
+**[OpenMP 3.0 Summary](http://www.openmp.org/wp-content/uploads/OpenMP3.0-SummarySpec.pdf)**
+
 [OpenMP - Lawrence Livermore National Laboratory](https://computing.llnl.gov/tutorials/openMP/)
 
 [Compiler Options - Cornell University](https://cvw.cac.cornell.edu/codeopt/compilerOptions)
