@@ -18,7 +18,7 @@ Through the following exercise we will see what the **for** directive does and h
 
 ## Exercise 1
 
-Complete the code *parallel.c* on this folder. The code is marked with number 1 to 5 that describes the sequence of steps that you must follow.
+Complete the code *for.c* on this folder. The code is marked with number 1 to 5 that describes the sequence of steps that you must follow.
 
 ```c
 #include <stdio.h>      /* Standard I/O Library: printf */
@@ -31,9 +31,10 @@ Complete the code *parallel.c* on this folder. The code is marked with number 1 
 int main(){
 
     // 2.Create a parallel región here
+    // 3.Place the *for* directive just above for(....){...}
     for(int i=0; i<N; ++i){
-        // 3.Get thread id (within for)
-        // 4.Print thread id and i (within for)
+        // 4.Get thread id (within for)
+        // 5.Print thread id and i (within for)
     }
 
     return EXIT_SUCCESS;
@@ -56,14 +57,22 @@ for(int i=0; i<N; ++i){
     // 4.Print thread id and i (within for)
 }
 ```
+3. Place the *for* directive just above for(....){...}
 
-3. Get thread id (**within for statement**)
+```c
+#pragma omp for
+for(...){
+ ...
+}
+```
+
+4. Get thread id (**within for statement**)
 
 ```c
 int thread_id = omp_get_thread_num();
 ```
 
-4. Print thread id and i (**within for statement**)
+5. Print thread id and i (**within for statement**)
 
 ```c
 printf("Hi i'm thread %d, i have the %d iteration of the loop",thread_id,i);

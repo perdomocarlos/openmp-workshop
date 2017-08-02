@@ -1,4 +1,0 @@
-lun jul 31 15:07:54 COT 2017
-
-	 N 			 Estado 	T.Real(sg) 	 T.Usuario(sg) 	 T.Kernel(sg) 	 CPU 	 Memoria(KB)
-	99000000 		 Not needed 		 26.93 		 1.99 		 5.00 		 26% 	 2879856

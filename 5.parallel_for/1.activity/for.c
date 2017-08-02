@@ -8,10 +8,13 @@
 int main(){
 
     // 2.Create a parallel región here
-    // 3.Place the *for* directive just above for(....){...}
+    // 3.Place the *for* directive just above outer for(....){...}
     for(int i=0; i<N; ++i){
-        // 4.Get thread id (within for)
-        // 5.Print thread id and i (within for)
+        // 6.Place the *for* directive just above inner for(....){...}
+        for(int j=0; j<N; ++j){
+            // 4.Get thread id (within inner for)
+            // 5.Print thread id, i and j (within inner for)
+        }
     }
 
     return EXIT_SUCCESS;

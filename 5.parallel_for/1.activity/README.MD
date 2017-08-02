@@ -1,99 +1,97 @@
-# OpenMP *for* directve
+# OpenMP *for directve*
 
 ## Objectives
 
-- [x] You will learn how to use the **for** directive to process a vector in parallel.
-- [x] You will apply compilation flags to optimize the code
-- [x] You will learn when it is convenient to parallelize with **OpenMP** or use the **Compiler Optimization flags**.
+- [x] You will learn how to use the **for** directive to process a matrix in parallel.
+- [x] You will learn how threads divide the matrix processing.
 
 ## Introdution
 
-Processing large vectors of data is one of the most common tasks in scientific computing. This code is the famous sum of matrices, although not being optimized, it takes few seconds to finish its execution. Let's try to optimize this code to see how far we get.
+The parallel directive allows us to parallelize one or more sections of code, however the threads created with this directive carry out the same tasks (or execute the same code). In practice, the idea of OpenMP seeks to solve a bing problem by dividing it into independent parts, which can be carried out in parallel by several threads.
+
+In some cases it is necessary each thread perform different tasks, for example:
+
+* Each threads perform **different iterations of a for loop**.
+* Or they can execute **different sections of code**.
+
+Through the following exercise we will see what the **for** directive does and how it allows us to process the data in matrices in parallel.
 
 ## Exercise 1
 
-Run the *vector_add.c* code as follows
+Complete the code *for.c* on this folder. The code is marked with number 1 to 6 that describes the sequence of steps that you must follow.
 
-```bash
-make run 
+```c
+#include <stdio.h>      /* Standard I/O Library: printf */
+#include <stdlib.h>     /* Standard Library: malloc, calloc, free, ralloc */
+#include <string.h>     /* String funtions: strcpy*/
+// 1.Import the omp.h funtion library here
+
+# define N 10
+
+int main(){
+
+    // 2.Create a parallel región here
+    // 3.Place the *for* directive just above outer for(....){...}
+    for(int i=0; i<N; ++i){
+        // 6.Place the *for* directive just above inner for(....){...}
+        for(int j=0; j<N; ++j){
+            // 4.Get thread id (within inner for)
+            // 5.Print thread id, i and j (within inner for)
+        }
+    }
+
+    return EXIT_SUCCESS;
+};
 ```
 
-### Questions
+Complete the code with the following steps (please replace the comments).
 
-* ¿How much time it takes to complete?
-
-## Exercise 2
-
-Optimize the code with the GCC/G++ compiler flag -O3. Edith the *Makefile*, add the -O3 to the **CFLAGS** variable.
-
-```basemake
-CFLAGS = -std=gnu++11 -fopenmp -O3
-```
-
-Run the *vector_add.c* code as follows
-
-```bash
-make run 
-```
-### Questions
-
-* ¿How much time it takes to complete?
-* ¿Does the execution time improve?
-
-## Exercise 2
-
-After having executed the *vector_add.c* code sequentially (Exercise 1 and 2), let's try to parallelize the code using the **for** directive.  
-
-1. Add the OpenMP Libary, to enable the OpenMP features in the code.
+1. Import the omp.h funtion library
 
 ```c
 #include <omp.h>        /* OpenMP library */
 ```
 
-2. Enclose this section of code in a **parallel region**.
+2. Parallize this section of code with a **parallel region**
 
 ```c
-for(int j=0; j<N; ++j) C[j] = A[j] * B[j] + A[j];
+for(int i=0; i<N; ++i){
+    for(int j=0; j<N; ++j){
+        // 4.Get thread id (within inner for)
+        // 5.Print thread id, i and j (within inner for)
+    }
+}
 ```
-
-3. Add the parallel for directive just before **for(int j=0; j<N; ++j)** ... ;
+3. Place the *for* directive just above outer for(....){...}
 
 ```c
-#pragma omp parallel shared(A,B,C)
-{
 #pragma omp for
-for(int j=0; j<N; ++j) C[j] = A[j] * B[j] + A[j] ;
+for(...){
+ ...
 }
 ```
 
-* Run the code
+4. Get thread id (**within for statement**)
+
+```c
+int thread_id = omp_get_thread_num();
+```
+
+5. Print thread id, i and j (**within for statement**)
+
+```c
+printf("Hi i'm thread %d, i'm working on %d,%d\n",thread_id,i,j);
+
+```
+
+Run the code and answer the following questions.
 
 ```bash
 make run 
 ```
 
-The previous code, create the parallel región (**parallel** directive),  suggest arrays A, B, and C  will be shared among threads (**shared** clause). Finally suggets each thread will perform a different iteration of the loop (**for** directive). i.e, if for loop has 100 iterations and 2 threads were created, the first thread performs 0 - 49 iterations and the second one the 50 - 99 iterations.
-
 ### Questions
 
-* ¿How much time did it take to finish? 
-* ¿Did execution time improve?
-* ¿Why? **Ask monitor for answers**.
-
-
-
-## Exercise 3
-
-Remove the **-O3** optimization flag of the variable **CFLAGS** in your **Makefile**. 
-
-```basemake
-CFLAGS = -std=gnu++11 -fopenmp
-```
-
-### Questions
-* ¿Which optimization works better?
-    * The **-O3** Compiler flag only.
-    * The **-O3** compiler flag and the **for** directive applied together.
-    * The **for** directive only.
-    * ¿Why? **Ask monitor for answers**.
-
+* ¿How many threads were executed?
+* ¿Which rows does each thread process?
+* Run the code many times ¿What changes do you see in the program output?

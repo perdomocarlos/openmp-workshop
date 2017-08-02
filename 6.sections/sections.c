@@ -28,12 +28,6 @@ int main(){
     for(int i = 0; i < N; ++i)
         D[i] = A[i] * B[i];
 
-    /* Answer validation */
-    char validation[10];
-    strcpy(validation,"Not needed");
-
-    printf ( "\t%d \t\t %s \t\t ", N, validation );
-
     /* Releasing memory */
     free(A);
     free(B);
