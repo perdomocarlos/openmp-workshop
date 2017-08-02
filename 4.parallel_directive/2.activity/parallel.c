@@ -1,6 +1,6 @@
 #include <stdlib.h>     /* Standard Library: EXIT_SUCCESS */
 #include <stdio.h>      /* Standard I/O Library: printf */
-#include <omp.h>        /* OpenMP library */
+#include <omp.h>        /* OpenMP funtions header: omp_set_num_threads, omp_get_thread_num */
 
 
 int main(void){

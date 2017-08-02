@@ -46,7 +46,13 @@ For this introductory workshop do not care about all this clauses, in the follow
 
 ## Exercise 1
 
-* Open the file *parallel.c* and try to figure out what the code does. 
+* Open the file *parallel.c* and try to figure out what the code does.
+
+* Add the compilation flag **-fopenmp** to the CFLAGS variable in your *Makefile*. To enable OpenMP in the code.
+
+```basemake
+CFLAGS = -O3 -fopenmp
+```
 * Then run the code and check the code is working as you expect. **Hint: run the code many times**. 
 
 ```bash
@@ -55,9 +61,9 @@ make run
 
 ### Questions
 
-* ¿Is the answer correct?
-* ¿Does the answer change every run?
-* ¿Should the answer change?
+* Is the answer correct?
+* Does the answer change every run?
+* Should the answer change?
 
 ## Exercise 2
 
@@ -76,10 +82,10 @@ make run
 
 ### Questions
 
-* ¿Is the answer correct?
-* ¿Does the answer change every run?
-* ¿Should the answer change?
-* ¿What does the **private** clause do?
+* Is the answer correct?
+* Does the answer change every run?
+* Should the answer change?
+* What does the **private** clause do?
 
 ## Exercise 3
 
@@ -98,7 +104,7 @@ make run
 
 ### Questions
 
-* ¿Is the answer correct?
-* ¿Does the answer change every run?
-* ¿Should the answer change?
-* ¿What does the **firstprivate** clause do?
+* Is the answer correct?
+* Does the answer change every run?
+* Should the answer change?
+* What does the **firstprivate** clause do?

@@ -24,7 +24,7 @@ Complete the code *for.c* on this folder. The code is marked with number 1 to 5 
 #include <stdio.h>      /* Standard I/O Library: printf */
 #include <stdlib.h>     /* Standard Library: malloc, calloc, free, ralloc */
 #include <string.h>     /* String funtions: strcpy*/
-// 1.Import the omp.h funtion library here
+// 1.Import the omp.h funtions header here
 
 # define N 10
 

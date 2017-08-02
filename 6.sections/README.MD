@@ -41,10 +41,7 @@ for(int i=0; i<N; ++i){
 
 ## Exercise 1
 
-Given the structure of the directive sections:
-
-* Apply it to he code to parallelize those sections of code that are parallelizable.
-* Print the thread id on each section of code using the funtion **omp_get_thread_num();**
+Given the structure of the directive **sections**:
 
 ```c
  #pragma omp parallel               /* parallel region initialization*/ 
@@ -69,8 +66,20 @@ Given the structure of the directive sections:
 
 ```
 
+* Import the OpenMP funtion header.
+* Create the **parallel regón**
+* Apply the **sections** directive to parallelize those sections of code that are parallelizable.
+* Print the thread id on each section of code using the funtion **omp_get_thread_num();**
 
-Run the code several times and check which thread runs each section of code.
+When you have completed the code:
+
+* Add the compilation flag **-fopenmp** to the CFLAGS variable in your *Makefile*. To enable OpenMP in the code.
+
+```basemake
+CFLAGS = -std=gnu++11 -O3 -fopenmp
+```
+
+* Run the code several times and check which thread runs each section of code.
 
 ```bash
 make run 

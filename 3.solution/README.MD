@@ -18,7 +18,7 @@ Edit the file *matrixmult.c*
 * Import the OpenMP funtions header 
 
 ```c
-#include <omp.h>        /* OpenMP library */
+#include <omp.h>        /* OpenMP funtions header */
 ```
 
 * Replace this code

@@ -45,7 +45,7 @@ The code is marked with number 1 to 5 that describes the sequence of steps that 
 ```c
 #include <stdlib.h>     /* Standard Library: EXIT_SUCCESS */
 #include <stdio.h>      /* Standard I/O Library: printf */
-// 1.Import the omp.h funtion library here
+// 1.Import the omp.h funtions header here
 
 int main(void){
 
@@ -62,10 +62,10 @@ int main(void){
 
 Complete the code with the following steps (please replace the comments).
 
-1. Import the omp.h funtion library
+1. Import the omp.h funtions header
 
 ```c
-#include <omp.h>        /* OpenMP library */
+#include <omp.h>        /* OpenMP funtions header */
 ```
 
 2. Call the routine omp_set_num_therads
@@ -96,6 +96,12 @@ int thread_id = omp_get_thread_num();
 printf("Hi i'm thread %d\n",thread_id);
 ```
 
+Add the compilation flag **-fopenmp** to the CFLAGS variable in your *Makefile*. To enable OpenMP in the code.
+
+```basemake
+CFLAGS = -O3 -fopenmp
+```
+
 Run the code and answer the following questions.
 
 ```bash
@@ -104,8 +110,8 @@ make run
 
 ### Questions
 
-* ¿What is the output of the program? 
-* ¿Why?
+* What is the output of the program? 
+* Why?
 
 
 ## Exercise 2

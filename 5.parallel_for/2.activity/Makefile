@@ -6,7 +6,9 @@ COMPILER = g++
 # Compiler optimizations -O3
 # Give a compiler optimizations feedback -fopt-info-all
 # OpenMP library -fopenmp
-CFLAGS = -std=gnu++11 -fopenmp
+CFLAGS = -std=gnu++11
+
+
 # Run in debug mode
 run:  compile
 	@date | tee Time.txt

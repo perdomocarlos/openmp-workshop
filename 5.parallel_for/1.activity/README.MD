@@ -46,10 +46,10 @@ int main(){
 
 Complete the code with the following steps (please replace the comments).
 
-1. Import the omp.h funtion library
+1. Import the omp.h funtions header
 
 ```c
-#include <omp.h>        /* OpenMP library */
+#include <omp.h>        /* OpenMP funtions header */
 ```
 
 2. Parallize this section of code with a **parallel region**
@@ -84,6 +84,12 @@ printf("Hi i'm thread %d, i'm working on %d,%d\n",thread_id,i,j);
 
 ```
 
+Add the compilation flag **-fopenmp** to the CFLAGS variable in your *Makefile*. To enable OpenMP in the code.
+
+```basemake
+CFLAGS = -O3 -fopenmp
+```
+
 Run the code and answer the following questions.
 
 ```bash
@@ -92,6 +98,6 @@ make run
 
 ### Questions
 
-* ¿How many threads were executed?
-* ¿Which rows does each thread process?
-* Run the code many times ¿What changes do you see in the program output?
+* How many threads were executed?
+* Which rows does each thread process?
+* Run the code many times, What changes do you see in the program output?

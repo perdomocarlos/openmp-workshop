@@ -9,7 +9,7 @@
 
 OpenMP allows us to indicate which **regions of the code** we want to parallelize, annotating that sections with directives. The **parallel** directive creates a team of threads. Each thread creates a copy of the code enclosed by that directive. Finally that code is executed in parallel by the team of threads.
 
-## ¿How to parallelize a sequential code?
+## How to parallelize a sequential code?
 
 If we have the following code
 
@@ -36,12 +36,12 @@ printf("\nResult %d",b);
 
 ```
 
-We need, first import the OpenMP function header **omp.h**
+We need, first import the OpenMP functions header **omp.h**
 
 ```c
 #include <stdlib.h>     /* Standard Library: EXIT_SUCCESS */
 #include <stdio.h>      /* Standard I/O Library: printf */
-#include <omp.h>        /* OpenMP library */
+#include <omp.h>        /* OpenMP funtions header */
 
 int main(){
 
@@ -57,7 +57,7 @@ Then, enclose the section of code we need to parallelize with the **parallel** d
 ```c
 #include <stdlib.h>     /* Standard Library: EXIT_SUCCESS */
 #include <stdio.h>      /* Standard I/O Library: printf */
-#include <omp.h>        /* OpenMP library */
+#include <omp.h>        /* OpenMP funtions header */
 
 int main(){
 
@@ -94,6 +94,12 @@ Paralelize the following region of the *parallel.c* code.
 printf("Hello World !");
 ```
 
+Add the compilation flag **-fopenmp** to the CFLAGS variable in your *Makefile*. To enable OpenMP in the code.
+
+```basemake
+CFLAGS = -O3 -fopenmp
+```
+
 Then run Run the *parallel.c* code and answer the questions.
 
 ```bash
@@ -102,8 +108,8 @@ make run
 
 ### Questions
 
-* ¿How many "Hello World !" were printed in the terminal? 
-* ¿Why?
+* How many "Hello World !" were printed in the terminal? 
+* Why?
 * Are all threads running the same code?
 
 

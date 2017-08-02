@@ -11,6 +11,16 @@ The aim of this introductory workshop is to introduce the OpenMP library availab
 
 This workshop is guided by a presentation. During the presentation is required to make changes to the code present in this repository. In addition, questions are suggested to discuss during the talk.
 
+## Conclusions
+
+* To get advange of the computational power available on parallel computer it is neccesary the parallel programming.
+
+* Use of compiler flags is also an alternative to optimize the code execution.
+
+* Some applications only need compile optimizations to improve their runtime. As is the case in section 5.parallel_for - 2.activity (vectors addition).
+
+* Other applications work well with compile optimizations and OpenMP parallelism, as is the case in section 3.solution (matrix multiplication).
+
 ## References
 
 [OpenMP - Lawrence Livermore National Laboratory](https://computing.llnl.gov/tutorials/openMP/)
