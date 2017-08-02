@@ -1,8 +1,8 @@
 # Parallel Programming With OpenMP (*parallel* directve)
 
-OpenMP allows us to indicate which **regions of the code** we want to parallelize, annotating that sections with directives. the **parallel directive** creates a team of threads, each thread creates a copy of the code enclosed by the directive. Finally that code is executed in parallel by the team of threads.
+OpenMP allows us to indicate which **regions of the code** we want to parallelize, annotating that sections with directives. the **parallel directive** creates a team of threads. Each thread creates a copy of the code enclosed by that directive. Finally that code is executed in parallel by the team of threads.
 
-## Example: 
+## Example: ¿How to parallelize a sequential code?
 
 If we have the following code
 
@@ -19,7 +19,7 @@ int main(){
 }
 ```
 
-And we want to parallelize this code
+And we want to parallelize this section
 
 
 ```c
@@ -29,7 +29,7 @@ printf("\nResult %d",b);
 
 ```
 
-We need first import the OpenMP function header **omp.h**
+We need, first import the OpenMP function header **omp.h**
 
 ```c
 #include <stdlib.h>     /* Standard Library: EXIT_SUCCESS */
@@ -64,11 +64,13 @@ int main(){
 }
 ```
 
+Finally the work is done !!
+
 ## Exercise 1
 
 This is the *hello world code* this code prints the word "Hello World !" by terminal. Les't check if this code do what we expect.
 
-Run the *parallel.c* code as follows
+Run the *parallel.c* code as follows and answer the questiosn below.
 
 ```bash
 make run 
@@ -85,7 +87,7 @@ Paralelize the following region of the *parallel.c* code.
 printf("Hello World !");
 ```
 
-Then run Run the *parallel.c* code and answer the questions
+Then run Run the *parallel.c* code and answer the questions.
 
 ```bash
 make run 

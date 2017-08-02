@@ -1,6 +1,6 @@
-# OpenMP (Routines)
+# OpenMP (Routines/Functions)
 
-OpenMP provide to us a number of routines that allows to:
+OpenMP provide to us a number of routines/funtions that allows to:
 
 * Set the number of threads we want to create in a parallel region.
 
@@ -26,13 +26,13 @@ omp_get_thread_num();
 omp_in_parallel();
 ```
 
-* etc.
+* Among other features. More info please look at the References [here](http://www.openmp.org/wp-content/uploads/OpenMP3.0-SummarySpec.pdf)
 
-## Activity 1
+## Exercise 1
 
-The purpose of this activity is to know how to modify the number of threads that will start in a **parallel región**, and know the identifier of each thread executed.
+The purpose of this exercise is to know how to modify the number of threads that will start in a **parallel región**, and know the identifier of each thread executed.
 
-This activity is to complete the code *parallel.c* on this folder. The code is marked with number 1 to 3 that describes the sequence of steps that you must follow.
+Complete the code *parallel.c* on this folder. The code is marked with number 1 to 5 that describes the sequence of steps that you must follow.
 
 ```c
 #include <stdlib.h>     /* Standard Library: EXIT_SUCCESS */
@@ -44,8 +44,8 @@ int main(void){
     // 2.Call the routine omp_set_num_therads here
 
     // 3.Create a parallel región here
-    // 3.1.Get thread id (in the parallel región)
-    // 3.2 Print thread id (in the parallel región)
+    // 4.Get thread id (within the parallel región)
+    // 5.Print thread id (within the parallel región)
 
     return EXIT_SUCCESS;
 };
@@ -67,9 +67,6 @@ omp_set_num_therads(8);
 ```
 
 3. Create a parallel region.
-    1. Get thread id (in the parallel region).
-    2. Print thread id (in the parallel region).
-
 
 ```c
 #pragma omp parallel
@@ -78,9 +75,14 @@ omp_set_num_therads(8);
 }
 ```
 
+4. Get thread id **within the parallel region**.
+
 ```c
 int thread_id = omp_get_thread_num();
 ```
+
+5. Print thread id **within the parallel region**.
+
 
 ```c
 printf("Hi i'm thread %d\n",thread_id);
@@ -98,8 +100,10 @@ make run
 * ¿Why?
 
 
-## Activity 2
+## Exercise 2
 
-Modify the parallel region, insted of each thread print its **id**, print if its **id** is even or odd.
-**Hint: a number N is even if 2 % N == 0, **
+Modify the code inside the parallel region. Insted of each thread print its **id**, print if its **id** is even or odd.
 
+Hints:
+* Hint: a number N is even if 2 % N == 0, otherwise it is odd.
+* You can use the **if statement**.

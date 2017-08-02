@@ -6,7 +6,7 @@ Today the sequential programming approach to which we are accustomed represents 
 
 ## Example 1
 
-This code performs the matrix multiplication, given in a sequential approach. Let's perform the following experiment and anser the quetions below.
+This code performs the matrix multiplication, given in a sequential approach. Let's perform the following experiment and answer the quetions below.
 
 Run the following command in one **Terminal**
 
