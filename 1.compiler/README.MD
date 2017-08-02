@@ -50,7 +50,7 @@ For this example we will focus on the execution time and the correctness of the 
 
 The compilation and execution of the program is controlled by the file *Makefile*. Edit the *Makefile* and change the variable **CFLAGS** as follows.
 
-Add the compiler optimzation -O1 and -fopt-info-all (to get a info about the compiler optimizations performed).
+Add the compiler optimzation -O1 and -fopt-info-all (to get a feedback about the compiler optimizations performed).
 
 ```basemake
 CFLAGS = -std=gnu++11 -O1 -fopt-info-all
