@@ -1,4 +1,4 @@
-# Parallel Programming With OpenMP (*for* directve)
+# OpenMP *sections* directve
 
 ## Objectives
 

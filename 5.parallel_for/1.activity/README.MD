@@ -1,4 +1,4 @@
-# OpenMP *for directve*
+# OpenMP *for* directve
 
 ## Objectives
 
