@@ -3,6 +3,8 @@
 ## Objectives
 
 - [x] You will learn how to use the **for** directive to process a vector in parallel.
+- [x] You will apply compilation flags to optimize the code
+- [x] You will learn when it is convenient to parallelize with **OpenMP** or use the **Compiler Optimization flags**.
 
 ## Introdution
 

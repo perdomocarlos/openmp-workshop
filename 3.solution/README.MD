@@ -1,5 +1,12 @@
 # Parallel Programming Approach
 
+## Objectives
+
+- [x] You will see how a parallel program actually runs on a computer.
+- [x] And how many cores does it use.
+
+## Introdution
+
 Parallel programming allow to divide a big task in subtasks that in consequense can be performed in parallel by a parallel computer (PCs, Cluster, Supercomputer).
 
 ## Example
