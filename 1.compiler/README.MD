@@ -2,8 +2,8 @@
 
 ## Objectives
 
-[x] You will learn what the compiler does.
-[x] How to use the compiler to optimize the code.
+- [x] You will learn what the compiler does.
+- [x] How to use the compiler to optimize the code.
 
 ## Introdution
 
