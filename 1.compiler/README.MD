@@ -1,4 +1,11 @@
-# Compiler Optimizations
+# GCC/G++ Compiler Optimizations
+
+## Objectives
+
+[x] You will learn what the compiler does.
+[x] How to use the compiler to optimize the code.
+
+## Introdution
 
 The compiler tries to minimize certain attributes of a computer program in order to increase efficiency and performance. Compiler optimizations are applied through a sequence of optimization transformations and algorithms to produce another program semantically equivalent but optimized [1](https://en.wikipedia.org/wiki/Optimizing_compiler). In general these optimizations allow:
 
@@ -7,7 +14,7 @@ The compiler tries to minimize certain attributes of a computer program in order
 * Reorder variables to recude Main Memory accesses.
 * Delete the calculation of variables that do not affect the status of the program.
 
-## Enable Optimizations
+### Enable Optimizations
 
 The following flags are really shorthand; they combine a number of specific techniques into a single option.
 
@@ -41,17 +48,14 @@ For this example we will focus on the execution time and the correctness of the 
 
 ## Exercise 2
 
-The compilation and execution of the program is controlled by the file *Makefile*. Change the variable **CFLAGS** in your *Makefile* as follows.
+The compilation and execution of the program is controlled by the file *Makefile*. Edit the *Makefile* and change the variable **CFLAGS** as follows.
 
-```basemake
-CFLAGS = -std=gnu++11
-```
 Add the compiler optimzation -O1 and -fopt-info-all (to get a info about the compiler optimizations performed).
 
 ```basemake
 CFLAGS = -std=gnu++11 -O1 -fopt-info-all
 ```
-Run the application *vector_add.c* as follows, an check the excution time and program correctness.
+Run the application *vector_add.c* as follows, and check the excution time and program correctness.
 
 ```bash
 make run 
@@ -64,7 +68,7 @@ Now do the same Exercise 2 but this time with the optimization flags -O2 and -O3
 
 ## Questions
 
-* ¿What happend with the run time? 
+* ¿What happend with the execution time? 
 * ¿Which option works best? 
 * ¿Is the answer correct in each case?.
 * Check the file *Optimizations.txt* an look at all the work the compiler does 

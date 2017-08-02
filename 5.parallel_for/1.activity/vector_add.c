@@ -11,7 +11,11 @@ typedef unsigned long int long_int;
 
 int main(){
 
-    /*  Memory initialization for arrays A, B, C */
+    /* Requesting dynamic memory for space to allocate A,B,C 
+    arrays are created commonly like A[N], B[N], C[N]. However
+    when N is too large it is neccesary to create them in the way
+    described as follows.
+    */
     long_int * A = (long_int *) malloc( N * sizeof(long_int) );
     long_int * B = (long_int *) malloc( N * sizeof(long_int) );
     long_int * C = (long_int *) malloc( N * sizeof(long_int) );
@@ -31,7 +35,11 @@ int main(){
 
     printf ( "\t%d \t\t %s \t\t ", N, validation );
 
-    /* Releasing memory */
+    /* When we request dynamic memory for large arrays
+    it is neccesary to release it before the application finish.
+    If you do not do this, the memory will be occupied with the data
+    of the arrays A, B and C regardless of whether the program is 
+    finished. */
     free(A);
     free(B);
     free(C);
