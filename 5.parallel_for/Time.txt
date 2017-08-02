@@ -1,4 +1,0 @@
-lun jul 31 11:42:34 COT 2017
-
-	 N 			 Estado 	T.Real(sg) 	 T.Usuario(sg) 	 T.Kernel(sg) 	 CPU 	 Memoria(KB)
-	9000 			 Ok 		 2.03 		 0.82 		 1.19 		 98% 	 1900012

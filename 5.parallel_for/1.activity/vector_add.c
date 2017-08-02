@@ -4,7 +4,7 @@
 // 1.Import the omp.h funtion library here
 
 /* Array size */
-#define N 99000000
+#define N 99999999
 
 /* Creating an alias for  unsigned long int datatype */
 typedef unsigned long int long_int;
@@ -23,9 +23,8 @@ int main(){
     /* Arrays content initialization */
     for(int i=0; i<N; ++i) A[i] = B[i] = C[i] = 1;
 
-    // 2. Enclose the following section of code in a parallel region
-    // i. add the parallel for directive just before for(int j=0; j<N; ++j)...;
-    for(int j=0; j<N; ++j) C[j] = A[j] * B[j] + A[j] ;
+    /* Arrays sum C = A + B */
+    for(int j=0; j<N; ++j) C[j] = A[j] + B[j];
     
     /* Answere validation */
     char validation[10];

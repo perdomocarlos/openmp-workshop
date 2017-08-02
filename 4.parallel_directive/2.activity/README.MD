@@ -1,14 +1,17 @@
-# OpenMP parallel directive (Clauses)
+# OpenMP (Clauses)
 
-An OpenMP directve follows the format depicted below. 
+## Objectives
 
-```c
-#pragma omp directive-name [clause,...]
-```
+- [x] You will learn what is a clause in OpenMP.
+- [x] You will learn which clauses the **parallel** directive supports.
+- [x] You will learn to use the clauses **private** and **firstprivate**.
+- [x] You will learn what the clauses **private** and **firstprivate** do.
 
-clauses are sentences that accompany a directive. They allow to modify the access to the data within the parallel region. Each directive supports a particular set of clauses.
+## Introdution
 
-Up to this point we know how the **parallel directive** works, however, this directive has a set of clauses that allows to modify the behavior of the data in the parallel region. The parallel directive support the following clauses. 
+Clauses are words that accompany a directive. They allow to modify **the access to the data within the parallel region** and the behavior of the parallel region. Each directive supports a particular set of clauses.
+
+For example, the parallel directive support the following clauses
 
 * if
 * **private**
@@ -17,8 +20,29 @@ Up to this point we know how the **parallel directive** works, however, this dir
 * **firstprivate**
 * reduction
 * copyin
+* num_threads
 
-Do not care about all this directives, for the following activities we will discover what **private** and **fisrtprivate** really do over the data in the *parallel.c* code. A better explanation of the other directives can be found [here](https://computing.llnl.gov/tutorials/openMP/#Clauses).
+Then the parallel directive might look like this
+
+```c
+#pragma omp parallel if(...)
+```
+
+or
+
+
+```c
+#pragma omp parallel private(...)
+```
+
+or 
+
+
+```c
+#pragma omp parallel if(...) private(...) shared(...) .....
+```
+
+For this introductory workshop do not care about all this clauses, in the following activities we will discover what **private** and **fisrtprivate** really do over the data in the *parallel.c* code. A better explanation of the other directives can be found [here](https://computing.llnl.gov/tutorials/openMP/#Clauses).
 
 ## Exercise 1
 
@@ -55,6 +79,7 @@ make run
 * ¿Is the answer correct?
 * ¿Does the answer change every run?
 * ¿Should the answer change?
+* ¿What does the **private** clause do?
 
 ## Exercise 3
 
@@ -76,3 +101,4 @@ make run
 * ¿Is the answer correct?
 * ¿Does the answer change every run?
 * ¿Should the answer change?
+* ¿What does the **firstprivate** clause do?

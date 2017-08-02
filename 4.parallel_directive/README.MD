@@ -1,8 +1,15 @@
 # Parallel Programming With OpenMP (*parallel* directve)
 
-OpenMP allows us to indicate which **regions of the code** we want to parallelize, annotating that sections with directives. the **parallel directive** creates a team of threads. Each thread creates a copy of the code enclosed by that directive. Finally that code is executed in parallel by the team of threads.
+## Objectives
 
-## Example: ¿How to parallelize a sequential code?
+- [x] You will learn how to parallelize a sequential code with parallel threads.
+- [x] You will learn what the **parallel** directive does.
+
+## Introdution
+
+OpenMP allows us to indicate which **regions of the code** we want to parallelize, annotating that sections with directives. The **parallel** directive creates a team of threads. Each thread creates a copy of the code enclosed by that directive. Finally that code is executed in parallel by the team of threads.
+
+## ¿How to parallelize a sequential code?
 
 If we have the following code
 
@@ -45,7 +52,7 @@ int main(){
 }
 ```
 
-Then, enclose the section of code we need to parallelize with the **parallel directive**
+Then, enclose the section of code we need to parallelize with the **parallel** directive
 
 ```c
 #include <stdlib.h>     /* Standard Library: EXIT_SUCCESS */
@@ -64,7 +71,7 @@ int main(){
 }
 ```
 
-Finally the work is done !!
+Finally the work is done !!, you have parallelized the code.
 
 ## Exercise 1
 
@@ -97,3 +104,7 @@ make run
 
 * ¿How many "Hello World !" were printed in the terminal? 
 * ¿Why?
+* Are all threads running the same code?
+
+
+Do the activities 1 and 2 of this section to learn more about the **parallel** directive.

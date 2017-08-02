@@ -1,6 +1,14 @@
 # OpenMP (Routines/Functions)
 
-OpenMP provide to us a number of routines/funtions that allows to:
+## Objectives
+
+- [x] You will learn some functions provided by OpenMP to control and obtain information from the parallel region.
+- [x] You will learn how to change the number of threads to be created in a parallel region.
+- [x] You will learn to identify each thread within the parallel region.
+
+## Introdution
+
+OpenMP provide a number of funtions that allows to:
 
 * Set the number of threads we want to create in a parallel region.
 
@@ -26,13 +34,13 @@ omp_get_thread_num();
 omp_in_parallel();
 ```
 
-* Among other features. More info please look at the References [here](http://www.openmp.org/wp-content/uploads/OpenMP3.0-SummarySpec.pdf)
+* Among [other functions](http://www.openmp.org/wp-content/uploads/OpenMP3.0-SummarySpec.pdf). On this section we will focuse on functions **omp_set_num_threads and omp_get_thread_num** 
 
 ## Exercise 1
 
 The purpose of this exercise is to know how to modify the number of threads that will start in a **parallel región**, and know the identifier of each thread executed.
 
-Complete the code *parallel.c* on this folder. The code is marked with number 1 to 5 that describes the sequence of steps that you must follow.
+The code is marked with number 1 to 5 that describes the sequence of steps that you must follow.
 
 ```c
 #include <stdlib.h>     /* Standard Library: EXIT_SUCCESS */

@@ -1,13 +1,14 @@
-# Parallel Programming With OpenMP (*for* directve)
+# OpenMP *for* directve
 
-OpenMP allows us to indicate which **regions of the code** we want to parallelize, annotating that sections with directives. the **parallel directive** creates a team of threads where each thread execute the code enclosed by the directive. However, each thread creates its own copy of the code enclosed by that directive, finally all threads will do the same thing. In some cases it is necessary each thread perform different tasks, for example:
+## Objectives
 
-* Each threads perform **different iterations of a for loop**.
-* Or they can execute **different sections of code**.
+- [x] You will learn how to use the **for** directive to process a vector in parallel.
+
+## Introdution
+
+Processing large vectors of data is one of the most common tasks in scientific computing. This code is the famous sum of matrices, although not being optimized, it takes few seconds to finish its execution. Let's try to optimize this code to see how far we get.
 
 ## Exercise 1
-
-This code performs the following operation between arrays: **C = A * B + A**. Les't check if this code do what we expect.
 
 Run the *vector_add.c* code as follows
 
@@ -21,7 +22,25 @@ make run
 
 ## Exercise 2
 
-After having executed the *vector_add.c* code sequentially (Exercise 1), let's try to parallelize the code using the **for directive**.  
+Optimize the code with the GCC/G++ compiler flag -O3. Edith the *Makefile*, add the -O3 to the **CFLAGS** variable.
+
+```basemake
+CFLAGS = -std=gnu++11 -fopenmp -O3
+```
+
+Run the *vector_add.c* code as follows
+
+```bash
+make run 
+```
+### Questions
+
+* ¿How much time it takes to complete?
+* ¿Does the execution time improve?
+
+## Exercise 2
+
+After having executed the *vector_add.c* code sequentially (Exercise 1 and 2), let's try to parallelize the code using the **for** directive.  
 
 1. Add the OpenMP Libary, to enable the OpenMP features in the code.
 
@@ -30,11 +49,12 @@ After having executed the *vector_add.c* code sequentially (Exercise 1), let's t
 ```
 
 2. Enclose this section of code in a **parallel region**.
-	1. add the parallel for directive just before for(int j=0; j<N; ++j) ... ;
 
 ```c
 for(int j=0; j<N; ++j) C[j] = A[j] * B[j] + A[j];
 ```
+
+3. Add the parallel for directive just before **for(int j=0; j<N; ++j)** ... ;
 
 ```c
 #pragma omp parallel shared(A,B,C)
@@ -55,7 +75,23 @@ The previous code, create the parallel región (**parallel** directive),  sugges
 ### Questions
 
 * ¿How much time did it take to finish? 
-* ¿Did execution time improve? 
-* ¿Why? 
+* ¿Did execution time improve?
+* ¿Why? **Ask monitor for answers**.
 
-**Ask monitor for answers**.
+
+
+## Exercise 3
+
+Remove the **-O3** optimization flag of the variable **CFLAGS** in your **Makefile**. 
+
+```basemake
+CFLAGS = -std=gnu++11 -fopenmp
+```
+
+### Questions
+* ¿Which optimization works better?
+    * The **-O3** Compiler flag only.
+    * The **-O3** compiler flag and the **for** directive applied together.
+    * The **for** directive only.
+    * ¿Why? **Ask monitor for answers**.
+

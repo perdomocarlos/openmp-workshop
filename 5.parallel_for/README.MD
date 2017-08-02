@@ -1,13 +1,20 @@
-# OpenMP *for directve*
+# OpenMP *for* directve
 
-The parallel directive allows us to parallelize one or more sections of code, however the threads created with this directive carry out the same tasks (or execute the same code). In practice, the idea of OpenMP seeks to solve a bing problem by dividing it into independent parts, which can be carried out in parallel by several threads.
+## Objectives
+
+- [x] You will learn what the **for** directive does.
+- [x] You will learn how does the **for** directive work.
+
+## Introdution
+
+The parallel directive allows to parallelize one or more sections of code, however the threads created with this directive carry out the same tasks (or execute the same code). In practice, the idea of OpenMP seeks to solve a bing problem by dividing it into independent parts, which can be carried out in parallel by several threads.
 
 In some cases it is necessary each thread perform different tasks, for example:
 
 * Each threads perform **different iterations of a for loop**.
-* Or they can execute **different sections of code**.
+* Or they execute **different sections of code, not the same**.
 
-Through the following exercise we will see what the **for** directive does and how it allows us to process the data in a vector in parallel.
+Through the following exercise we will see what the **for** directive does and how it will allow us to process the data in a vector in parallel.
 
 ## Exercise 1
 
@@ -72,5 +79,7 @@ make run
 ### Questions
 
 * ¿How many threads were executed?
-* ¿How many **for** cycle iterations each thread executed?
+* ¿How many **for** iterations each thread executed?
 * Run the code many times ¿What changes do you see in the program output?
+
+Do the activities 1 and 2 of this section to learn more about the **parallel** directive.
