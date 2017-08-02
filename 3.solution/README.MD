@@ -15,18 +15,9 @@ This code is the matrix multiplication code, given in a sequential approach. The
 
 Edit the file *matrixmult.c*
 
-* Add the OpenMP Libary 
+* Import the OpenMP funtions header 
 
 ```c
-#include <stdio.h>      /* Standard I/O Library: printf */
-#include <stdlib.h>     /* Standard Library: malloc, calloc, free, ralloc */
-#include <string.h>     /* String funtions: strcpy*/
-```
-
-```c
-#include <stdio.h>      /* Standard I/O Library: printf */
-#include <stdlib.h>     /* Standard Library: malloc, calloc, free, ralloc */
-#include <string.h>     /* String funtions: strcpy*/
 #include <omp.h>        /* OpenMP library */
 ```
 
@@ -60,7 +51,13 @@ for(int i=0;i<N;i++){
 } 
 ```
 
-Run the following command in one **Terminal**
+* Add the compilation flag **-fopenmp** to the CFLAGS variable in your *Makefile*. To enable OpenMP in the code.
+
+```basemake
+CFLAGS = -O3 -fopenmp
+```
+
+* Run the following command in one **Terminal**
 
 ```bash
 htop 
@@ -74,5 +71,6 @@ make run
 
 ## Questions
 
-* ¿How many cores this *matrixmult.c* takes to perform its calculation? 
-* ¿Is there paralelism?.
+* How many cores this *matrixmult.c* takes to perform its calculation? 
+* Is there paralelism?.
+* How long does the program take to finish?

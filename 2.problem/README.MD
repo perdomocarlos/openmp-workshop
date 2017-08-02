@@ -29,5 +29,6 @@ make run
 
 ## Questions
 
-* ¿How many cores this *matrixmult.c* takes to perform its calculation? 
-* ¿Is there paralelism?.
+* How many cores this *matrixmult.c* takes to perform its calculation? 
+* Is there paralelism?
+* How long does the program take to finish?

@@ -8,6 +8,7 @@ COMPILER = g++
 # -fopenmp OpenMP library
 CFLAGS = -O3
 
+# Makefile RULES
 run: compile
 	@clear
 	@date | tee Time.txt

@@ -1,4 +1,0 @@
-mar ago  1 09:08:29 COT 2017
-
-	 N 			 Estado 	T.Real(sg) 	 T.Usuario(sg) 	 T.Kernel(sg) 	 CPU 	 Memoria(KB)
-	1000 			 Ok 		 11.01 		 11.00 		 0.00 		 99% 	 24860

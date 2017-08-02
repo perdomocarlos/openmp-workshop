@@ -68,7 +68,7 @@ Now do the same Exercise 2 but this time with the optimization flags -O2 and -O3
 
 ## Questions
 
-* ¿What happend with the execution time? 
-* ¿Which option works best? 
-* ¿Is the answer correct in each case?.
+* What happend with the execution time? 
+* Which option works best? 
+* Is the answer correct in each case?.
 * Check the file *Optimizations.txt* an look at all the work the compiler does 

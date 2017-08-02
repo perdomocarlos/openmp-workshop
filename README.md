@@ -1,6 +1,6 @@
 # Introduction to OpenMP - Workshop
 
-The aim of this introductory workshop is to highlight the advantage of OpenMP as a library available in the GNU compiler to apply parallelism in our C/C++ applications. This workshop covers:
+The aim of this introductory workshop is to introduce the OpenMP library available in the GNU compiler to apply parallelism in our C/C++ applications. This workshop covers:
 
 * Compiler optimization options -O1, -O2 and -O3.
 * **parallel** directive
@@ -9,7 +9,7 @@ The aim of this introductory workshop is to highlight the advantage of OpenMP as
 
 ## Methodology
 
-This workshop is guided by a presentation. During the presentation is required to make changes to the code present in this repository.
+This workshop is guided by a presentation. During the presentation is required to make changes to the code present in this repository. In addition, questions are suggested to discuss during the talk.
 
 ## References
 
